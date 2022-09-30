@@ -1,0 +1,8 @@
+7-bit: FTP server on 138.47.157.24 port 8008
+user: qqjvzk
+pass: ijezgzfkwlkkfa
+
+Of course, the actual username and password must be decrypted to login properly. The username was encrypted once and the password twice using vigenere cipher with the following key: "cyberstorm"
+
+7-bit with control chars: FTP server on 138.47.157.24 port 8008[LF]user: qqjvzk[LF]pass: ijezgzfkwlkkfa[LF][LF]Of course, the actual username and
+password must be decrypted to login properly. The username was encrypted once and the password twice using vigenere cipher with the following key: "cyberstorm"[LF]

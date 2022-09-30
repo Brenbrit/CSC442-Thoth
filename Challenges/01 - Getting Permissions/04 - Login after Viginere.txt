@@ -1,0 +1,4 @@
+IP = "138.47.157.24"
+PORT = 8008
+USER = "osiris"
+PASSWORD = "encryptiongods"
