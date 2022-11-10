@@ -1,15 +1,7 @@
-# Thoth members:
-#   Brendan Guillory
-#   Cameron Robertson
-#   Christian Evans
-#   Cody Woessner
-#   Drew Young
-#   Frankie Lavall
-#   Tristen Barton
-
-# mime.py: listens for user input until a specified key (ESCAPE_KEY) is pressed,
+# Tutorial: listens for user input until a specified key (ESCAPE_KEY) is pressed,
 # then repeats that user input once.
 # If an argument is supplied, the program reads the key event list from that argument.
+# By default, event lists are stored in .pickle files.
 
 from pynput.keyboard import Listener, Key, Controller
 from termios import tcflush, TCIFLUSH

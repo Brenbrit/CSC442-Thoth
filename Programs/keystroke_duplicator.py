@@ -1,3 +1,8 @@
+# Tutorial: This is a program made during the keystroke dynamics challenge.
+#   Modify the below password and timings to change what the program will tye.
+#   Then, run the program. When you're ready, press ESCAPE_KEY (bound to Key.enter)
+#   to start typing.
+
 from pynput.keyboard import Controller, Listener, Key
 from time import sleep
 from random import uniform

@@ -1,3 +1,6 @@
+# Tutorial: This is a covert FTP program identical to the rubric.
+#   It is included only for completeness. ftp_covert_recursive.py is better.
+
 # Thoth members:
 #   Brendan Guillory
 #   Cameron Robertson

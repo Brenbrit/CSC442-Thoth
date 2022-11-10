@@ -1,13 +1,7 @@
-# Thoth members:
-#   Brendan Guillory
-#   Cameron Robertson
-#   Christian Evans
-#   Cody Woessner
-#   Drew Young
-#   Frankie Lavall
-#   Tristen Barton
-
-# prog_07 - Steg: Hide and recover data inside other data.
+# Tutorial: A modified version of steg.py.
+#   Run the program with all the same arguments as steg.py except for interval.
+#   The program will loop through lots of intervals and save them all, then you
+#   just need to figure out which output files are useful.
 
 
 import argparse
@@ -193,10 +187,15 @@ hidden_file = args["h"]
 if args["s"]: # store
     store_data(hidden_file, wrapper_file, bit_mode, offset, interval, SENTINEL)
 else: # retrieve
-    for i in range(9):
-        interval = 2**i
-        print(f"Retrieving file with interval {i}")
-        data = retrieve_data(wrapper_file, bit_mode, offset, interval, SENTINEL)
+    for i in range(12):
+        try:
+            interval = 2**i
+            print(f"Retrieving file with interval {i}")
+            data = retrieve_data(wrapper_file, bit_mode, offset, interval, SENTINEL)
 
-        with open(wrapper_file + "_interval_" + str(interval), 'wb') as f:
-            f.write(data)
+            with open(wrapper_file + "_interval_" + str(interval), 'wb') as f:
+                f.write(data)
+        except Exception as e:
+            print(f"Program encountered an error on interval {2**i}. This may or may not be intended. Files are still saved.")
+            print(e)
+            break

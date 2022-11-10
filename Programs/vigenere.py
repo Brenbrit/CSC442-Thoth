@@ -1,11 +1,6 @@
-# Thoth members:
-#   Brendan Guillory
-#   Cameron Robertson
-#   Christian Evans
-#   Cody Woessner
-#   Drew Young
-#   Frankie Lavall
-#   Tristen Barton
+# Tutorial: Vigenere program directly from the rubric.
+#   Example: py vigenere.py -e "my encryption key"
+#   Example: py vigenere.py -d "my decryption key"
 
 # for sys.stdin.readline() and sys.argv
 import sys

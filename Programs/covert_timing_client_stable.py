@@ -1,19 +1,9 @@
-# Thoth members:
-#   Brendan Guillory
-#   Cameron Robertson
-#   Christian Evans
-#   Cody Woessner
-#   Drew Young
-#   Frankie Lavall
-#   Tristen Barton
+# Tutorial: Simply change the IP and port below and run the program.
+#   First, the program will connect to the server and determine the timings.
+#     Press Ctrl+C to finish this process.
+#   Second, the program will read the server's covert information over and over.
+#     Press Ctrl+C to finish this process.
 
-
-import socket
-from sys import stdout
-from time import time
-from binascii import unhexlify
-from datetime import datetime
-import pyperclip
 
 # Constants!
 
@@ -23,20 +13,26 @@ PORT = 21
 # enables debugging output
 DEBUG = False
 
-# set the server's IP address and port
-#IP = "138.47.102.167"
-#PORT = 1337
+# number of bits per character
+MSG_BITS = 8
+
+# treats packets with more than one character as errors.
+ONLY_SINGLE_CHARS = True
+
+
+import socket
+from sys import stdout
+from time import time
+from binascii import unhexlify
+from datetime import datetime
+import pyperclip
+
 
 # cutoff value: delays equal or higher than this are 1.
 # Delays lower to this are 0.
 # This can be manually set (as it is for prog_04), but this program
 # will determine it though data analysis.
 # CUTOFF = (0.1 + 0.025)/2 # seconds
-
-# number of bits per character
-MSG_BITS = 8
-
-ONLY_SINGLE_CHARS = True
 
 # Grabs and decodes a message from the server. Almost an exact copy of prog_04_client.py
 def get_msg(cutoff):

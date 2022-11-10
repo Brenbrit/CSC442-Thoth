@@ -1,15 +1,8 @@
 # Tutorial: run the program and paste binary. The program will translate to text. It's that easy.
-# If your binary is not divisible by 7 or 8, the program will not output anything. If you want
-# it to work on your binary anyway, comment out the two if statements at the bottom of the program.
+# If the program is not outputting anything, change SKIP_DIVISIBILITY_CHECK to True.
 
-# Thoth members:
-#   Brendan Guillory
-#   Cameron Robertson
-#   Christian Evans
-#   Cody Woessner
-#   Drew Young
-#   Frankie Lavall
-#   Tristen Barton
+# Program normally checks if input is divisible by 7 or 8. Skip this check?
+SKIP_DIVISIBILITY_CHECK = False
 
 # needed for sys.stdin
 import sys
@@ -86,12 +79,12 @@ for line in sys.stdin:
     # remove EOF, etc.
     line_stripped = line.rstrip()
 
-    if len(line_stripped) % 8 == 0:
+    if SKIP_DIVISIBILITY_CHECK or len(line_stripped) % 8 == 0:
         # line may be 8-bit
         print("8-bit: ", end='')
         decode(line_stripped, 8)
 
-    if len(line_stripped) % 7 == 0:
+    if SKIP_DIVISIBILITY_CHECK or len(line_stripped) % 7 == 0:
         # line may be 7-bit
         print("7-bit: ", end='')
         decode(line_stripped, 7)

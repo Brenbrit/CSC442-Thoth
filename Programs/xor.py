@@ -1,14 +1,5 @@
-# Thoth members:
-#   Brendan Guillory
-#   Cameron Robertson
-#   Christian Evans
-#   Cody Woessner
-#   Drew Young
-#   Frankie Lavall
-#   Tristen Barton
-
-# prog_06 - Xor Crypto: Given a file and a key file (./key), return
-#   file xor key.
+# Tutorial: Given a file and a key file (KEY_LOC below), return
+#   (file xor key). Directly from rubric. Make sure to redirect output.
 
 # constants!
 # The location for the key file

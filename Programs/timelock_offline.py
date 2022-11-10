@@ -1,14 +1,5 @@
-# Thoth members:
-#   Brendan Guillory
-#   Cameron Robertson
-#   Christian Evans
-#   Cody Woessner
-#   Drew Young
-#   Frankie Lavall
-#   Tristen Barton
-
-# prog_05 - TimeLock: given an epoch as input and the current system time,
-#   return a password.
+# Tutorial: given an epoch as input and the current system time,
+#   return a password. This program is exactly from the rubric and does not use internet.
 
 import datetime as dt
 from time import time

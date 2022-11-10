@@ -1,5 +1,7 @@
-# prog_05 - TimeLock: given an epoch as input and the current system time,
-#   return a password.
+# Tutorial: given an epoch and current time, return a password.
+#   Type the epoch time into DEBUG_EPOCH_TIME and specify a server IP and password
+#   to get that server's time. You may need to alter SERVER_TIME_FORMAT and/or
+#   SERVER_RESPONSE_BEGIN and SERVER_RESPONSE_END to get good data.
 
 import datetime as dt
 from time import time
@@ -8,12 +10,6 @@ import socket
 from hashlib import md5
 import pytz
 import pyperclip
-
-# challenge stipulation: how should we find the middle
-# of an even-length hash?
-import math
-#tiebreaker_op = math.floor
-tiebreaker_op = math.ceil
 
 TIME_SERVER = ("138.47.99.64", 54321)
 
@@ -51,7 +47,7 @@ def md5_to_code(input_hash):
     code += hash_numbers[::number_order][:abs(NUM_NUMBERS)]
 
     # challenge stipulation (using int division)
-    # code += input_hash[tiebreaker_op(len(input_hash)//2)]
+    # code += input_hash[math.floor(len(input_hash)//2)]
 
     return code
 

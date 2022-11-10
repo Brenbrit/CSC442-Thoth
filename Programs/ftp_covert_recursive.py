@@ -1,19 +1,6 @@
-# Thoth members:
-#   Brendan Guillory
-#   Cameron Robertson
-#   Christian Evans
-#   Cody Woessner
-#   Drew Young
-#   Frankie Lavall
-#   Tristen Barton
-
+# Tutorial: change the IP, port, username, and password below. Folder is optional. Then just run the program.
 
 # constants
-
-# 7-bit: FTP server on 138.47.157.24 port 8008
-#user: qqjvzk
-#pass: ijezgzfkwlkkfa
-
 
 IP = "138.47.134.55"
 PORT = 21

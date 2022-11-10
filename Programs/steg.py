@@ -1,13 +1,6 @@
-# Thoth members:
-#   Brendan Guillory
-#   Cameron Robertson
-#   Christian Evans
-#   Cody Woessner
-#   Drew Young
-#   Frankie Lavall
-#   Tristen Barton
-
-# prog_07 - Steg: Hide and recover data inside other data.
+# Tutorial: Steg - Hide and recover data inside other data.
+#   This is exactly as the rubric specified. Run the program with no args
+#   for a help message.
 
 
 import argparse
